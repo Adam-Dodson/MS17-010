@@ -229,7 +229,7 @@ class MYSMB(smb.SMB):
 		# req = pkt.__str__().decode('utf-8',errors='ignore')
 		# Updated req so it returned the result of the string function.
 		req = pkt.__str__()
-		# Casted null hex chars to bytes object so for concatination to work.
+		# Casted null hex char to bytes object for concatination to work.
 		return b'\x00'*2 + pack('>H', len(req)) + req  # assume length is <65536
 
 	def send_raw(self, data):	
