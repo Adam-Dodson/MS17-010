@@ -1,4 +1,5 @@
-from mysmb import MYSMB
+# from mysmb import MYSMB
+from ms17010_mysmb import MYSMB
 from impacket import smb, smbconnection, nt_errors
 from impacket.uuid import uuidtup_to_bin
 from impacket.dcerpc.v5.rpcrt import DCERPCException
