@@ -10,7 +10,10 @@ import binascii
 
 def getNTStatus(self):
     return (self['ErrorCode'] << 16) | (self['_reserved'] << 8) | self['ErrorClass']
+
+
 setattr(smb.NewSMBPacket, "getNTStatus", getNTStatus)
+
 
 ############# SMB_COM_TRANSACTION_SECONDARY (0x26)
 class SMBTransactionSecondary_Parameters(smb.SMBCommand_Parameters):
